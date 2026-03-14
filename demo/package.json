@@ -1,0 +1,13 @@
+{
+  "name": "atlas-demo",
+  "version": "1.0.0",
+  "description": "Standalone demo of Forge Atlas — AI-powered D365 training generator",
+  "scripts": {
+    "start": "npx serve -l 3000 -s .",
+    "dev": "npx serve -l 3000 -s . --cors"
+  },
+  "private": true,
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forge Atlas — AI Training Generator</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Shell header -->
+    <header id="shell-header">
+      <div class="header-left">
+        <div id="header-logo-container">
+          <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+            <rect width="28" height="28" rx="6" fill="#0078D4"/>
+            <path d="M7 8h14v2H7zm0 5h14v2H7zm0 5h10v2H7z" fill="#fff"/>
+          </svg>
+        </div>
+        <span class="header-title">Forge Atlas</span>
+        <span class="header-env">DEMO</span>
+      </div>
+      <div class="header-right">
+        <span class="header-user">Demo Consultant</span>
+      </div>
+    </header>
+
+    <!-- Main layout -->
+    <div id="main-layout">
+      <!-- Sidebar nav -->
+      <nav id="sidebar">
+        <div class="nav-section">
+          <div class="nav-item active" data-view="dashboard">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M3 3h6v8H3V3zm8 0h6v4h-6V3zm0 6h6v8h-6V9zM3 13h6v4H3v-4z"/></svg>
+            <span>Dashboard</span>
+          </div>
+          <div class="nav-item" data-view="upload">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2l5 5h-3v5H8V7H5l5-5zM3 14h14v4H3v-4z"/></svg>
+            <span>Upload Solution</span>
+          </div>
+        </div>
+        <div class="nav-section" id="project-nav" style="display:none">
+          <div class="nav-section-title">Project</div>
+          <div class="nav-item" data-view="entities">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M3 3h14v2H3V3zm0 4h14v2H3V7zm0 4h14v2H3v-2zm0 4h14v2H3v-2z"/></svg>
+            <span>Entities</span>
+          </div>
+          <div class="nav-item" data-view="apps">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M3 3h6v6H3V3zm8 0h6v6h-6V3zm-8 8h6v6H3v-6zm8 0h6v6h-6v-6z"/></svg>
+            <span>Select App</span>
+          </div>
+          <div class="nav-item" data-view="workflows">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M4 4h12v2H4V4zm0 5h12v2H4V9zm0 5h8v2H4v-2zM15 11l3 3-3 3v-2h-4v-2h4v-2z"/></svg>
+            <span>Workflows</span>
+          </div>
+          <div class="nav-item" data-view="pipeline">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M2 10a8 8 0 1116 0 8 8 0 01-16 0zm8-6a6 6 0 100 12 6 6 0 000-12zm-1 3h2v4h3l-4 4-4-4h3V7z"/></svg>
+            <span>AI Pipeline</span>
+          </div>
+          <div class="nav-item" data-view="training">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 2L2 6l8 4 8-4-8-4zM2 9l8 4 8-4M2 12l8 4 8-4"/></svg>
+            <span>Training</span>
+          </div>
+          <div class="nav-item" data-view="adoption">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M3 17V7h3v10H3zm5 0V3h3v14H8zm5 0V9h3v8h-3z"/></svg>
+            <span>Adoption</span>
+          </div>
+          <div class="nav-item" data-view="branding">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M3 3h14v10H3V3zm2 12h10v2H5v-2z"/></svg>
+            <span>Branding</span>
+          </div>
+          <div class="nav-item" data-view="invites">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M2 4h16v12H2V4zm1 1v1l7 4 7-4V5H3zm0 3v6h14V8l-7 4-7-4z"/></svg>
+            <span>Invites</span>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Content area -->
+      <main id="content">
+        <!-- Views are rendered here by app.js -->
+      </main>
+    </div>
+  </div>
+
+  <script type="module" src="parser.js"></script>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
