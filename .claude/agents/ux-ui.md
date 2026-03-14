@@ -43,6 +43,23 @@ Atlas frontend is built on:
 Every recommendation you make must be implementable within these constraints.
 Never recommend external libraries, CSS files, or custom design tokens.
 
+## MVP-First Mindset
+
+Atlas is an unfinished product. Every design decision must serve the current build
+stage, not a hypothetical future one.
+
+- **Design for the core path.** One user, one task, one flow. Get that right first.
+- **Ignore edge cases during interviews.** When generating interview questions or
+  design recommendations, focus on the primary happy path. Do not ask about or
+  design for error recovery, power-user scenarios, admin overrides, or
+  accessibility edge cases until the core flow is solid.
+- **Defer, don't design.** If something is not needed for the core feature to work,
+  put it in Out of Scope. Do not design it speculatively.
+- **Reuse before inventing.** Use an existing Atlas component or pattern before
+  proposing a new one. New patterns are a last resort.
+- **No polish on unvalidated features.** Animations, micro-interactions, and visual
+  refinements come after the feature is proven to work, not before.
+
 ## Design Principles
 
 ### 1. Ruthless Simplicity

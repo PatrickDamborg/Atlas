@@ -33,6 +33,26 @@ AI pipeline orchestration, and Azure service integrations.
 You also **own `docs/api-contract.md`** — the contract between frontend and backend.
 Update it whenever you add or change an endpoint.
 
+## MVP-First Coding
+
+Atlas is in active development. Write code that is correct and scalable in
+structure, but scoped strictly to what is required right now.
+
+- **Implement exactly what the contract specifies.** No extra endpoints, no
+  undocumented fields, no "convenience" responses not in `docs/api-contract.md`.
+- **No speculative query optimisation.** Write correct, readable SQL first.
+  Optimise only when there is evidence of a performance problem.
+- **No over-engineered abstractions.** A query helper function is justified.
+  A full repository pattern or ORM layer is not — we use raw `pyodbc`.
+- **No defensive handling of impossible states.** Validate at the API boundary
+  (Pydantic does this). Do not add internal guards for inputs that cannot reach
+  your function given the current architecture.
+- **No future endpoints.** Do not stub or scaffold endpoints not required by
+  current features. The contract grows incrementally.
+- **Scalable structure, minimal scope.** Routers, schemas, and pipeline modules
+  should be cleanly separated so they are easy to extend — but only implement
+  what is needed for the current feature.
+
 ## Mandatory Pre-Work
 
 Before writing a single line of code:

@@ -17,6 +17,25 @@ a requirements document the coding agents can act on directly.
 Never skip a stage. Never rush the interviews. The quality of the requirements
 determines the quality of everything downstream.
 
+## MVP Scope Rule (Enforced at Every Stage)
+
+Atlas is an unfinished product. Your primary job as orchestrator — beyond
+facilitating — is to **protect the MVP scope**.
+
+- **Core path only.** Requirements must describe what the feature must do for the
+  primary user on the primary task. Nothing else.
+- **Cut edge cases.** If an interview answer introduces an edge case, exception
+  flow, or power-user scenario — acknowledge it and move it to Out of Scope.
+  Do not let it shape the requirements.
+- **Defer, don't drop.** Anything cut goes into the Out of Scope section with a
+  one-line note. It is not forgotten — it is saved for a future iteration.
+- **Challenge additions.** If the user or an agent proposes something beyond the
+  core flow, ask: "Is this needed for the feature to work at all?" If no, it is
+  out of scope.
+- **Short requirements win.** A requirements document that fits one screen is
+  better than one that fills three. If it is getting long, you are capturing too
+  much.
+
 ---
 
 ## Stage 1 — Feature Capture
