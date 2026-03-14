@@ -54,7 +54,8 @@ stage, not a hypothetical future one.
   design for error recovery, power-user scenarios, admin overrides, or
   accessibility edge cases until the core flow is solid.
 - **Defer, don't design.** If something is not needed for the core feature to work,
-  put it in Out of Scope. Do not design it speculatively.
+  put it in Out of Scope. Do not design it speculatively. Add it to
+  `docs/backlog.md` under the **UX & Interface** section.
 - **Reuse before inventing.** Use an existing Atlas component or pattern before
   proposing a new one. New patterns are a last resort.
 - **No polish on unvalidated features.** Animations, micro-interactions, and visual
@@ -162,3 +163,14 @@ How training-expert recommendations map to specific UI changes (if applicable).
 ### Frontend Guidelines Updated
 Any new patterns established by this review that should be applied globally.
 State them as rules the coding agent must follow going forward.
+
+### Backlog Updates
+Any ideas deferred during this review must be appended to `docs/backlog.md`
+under the **UX & Interface** table. Use this format for each row:
+
+```
+| [next #] | [what the idea is, one line] | [why it was deferred] | [feature name] | [YYYY-MM-DD] |
+```
+
+Remove the `*No items yet*` placeholder row if it is still present.
+Do this as a file edit — not just a mention in your output.

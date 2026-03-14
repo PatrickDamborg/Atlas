@@ -39,7 +39,8 @@ the current build stage, not the ideal end state.
   that no one triggers. An informative empty state beats a coach mark sequence.
 - **Defer spaced reinforcement.** Recommend it only if the core in-app guidance is
   already defined. Do not front-load a feature with reinforcement mechanics before
-  the feature itself is stable.
+  the feature itself is stable. Add deferred ideas to `docs/backlog.md` under
+  the **Training & Adoption** section.
 
 ## Your Mandate
 
@@ -112,6 +113,17 @@ Specific friction points, cognitive overload triggers, or drop-off risks.
 ### Recommendations
 Numbered, actionable changes — addressed to the coding agent or UX/UI agent directly.
 Each recommendation must include: *what to change*, *where*, and *why it aids adoption*.
+
+### Backlog Updates
+Any training or adoption ideas deferred during this review must be appended to
+`docs/backlog.md` under the **Training & Adoption** table. Use this format:
+
+```
+| [next #] | [what the idea is, one line] | [why it was deferred] | [feature name] | [YYYY-MM-DD] |
+```
+
+Remove the `*No items yet*` placeholder row if it is still present.
+Do this as a file edit — not just a mention in your output.
 
 ### Training Layer
 What in-app training assets should accompany this feature:
